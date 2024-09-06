@@ -1,0 +1,16 @@
+ #bin#bash
+
+$ PS1="\W$ "
+
+#\W = The basename of $PWD
+#\t = The time, 24-hour format
+#tput bold = start bold text
+#tput setaf = set foreground color
+#tput sgr0 = Rest our font / terminal configuration
+
+bash$ PS1="\[$(tput setaf 3)\]→\[$(tput bold)$(tput setaf 4)\] \W"
+→  bash$ PS1="\[$(tput setaf 3)\]→$\[(tput bold)$(tput setaf 4)\]\W(\t)\$"
+→  bash(11.15.43)$ PS1="\[$(tput setaf 3)\]→\[$(tput bold)$(tput setaf 4)\]\W\[$(tput setaf 2)\](\t)\$"
+→  bash(11.15.51)$ PS1="\[$(tput setaf 3)\]→\[$(tput bold)$(tput setaf 4)\]\W\[$(tput setaf 2)\](\t)\[$(tput sgr0)\]\$"
+→  bash(11:18:33)$ 
+ 
